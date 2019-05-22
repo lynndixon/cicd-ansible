@@ -1,2 +1,2 @@
 # cicd-ansible
-CI/CD Demonstration with Ansible
+Simple CI/CD Demonstration with Ansible and Cloudforms.
