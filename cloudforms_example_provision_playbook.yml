@@ -7,6 +7,6 @@
       msg: "Ansible is doing CloudForms things!"
 
   - fail:
-      msg: "Oh no!  I made a mistake in my Ansible process which integrates with the CloudForms infrastructure!"
-      #msg: "Awesome!  I fixed my mistake in my Ansible process which integrates with the CloudForms infrastructure!"
+      #msg: "Oh no!  I made a mistake in my Ansible process which integrates with the CloudForms infrastructure!"
+      msg: "Awesome!  I fixed my mistake in my Ansible process which integrates with the CloudForms infrastructure!"
 
