@@ -8,8 +8,8 @@
 
 #
 # FAIL: Uncomment lines below (spacing sensitive)
-  - fail:
-      msg: "Oh no!  I made a mistake in my Ansible process which integrates with the CloudForms infrastructure! Something broke"
+#  - fail:
+#      msg: "Oh no!  I made a mistake in my Ansible process which integrates with the CloudForms infrastructure! Something broke"
 
 # FIX: Uncomment lines below (spacing sensitive)
   - debug:
