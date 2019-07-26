@@ -13,7 +13,7 @@ pipeline {
         steps {
             echo "Refreshing Tower DEV Project"
             sh '''
-            /usr/bin/curl -X POST -u 'admin:r3dh4t!' 'https://tower.example.com/api/v2/projects/6/update/' -k
+            /usr/bin/curl -X POST -u 'admin:r3dh4t' 'https://tower.example.com/api/v2/projects/6/update/' -k
             '''
             }
     }
@@ -45,7 +45,7 @@ pipeline {
         steps {
             echo "Refreshing Production Tower Project"
             sh '''
-            /usr/bin/curl -X POST -u 'admin:r3dh4t!' 'https://tower.example.com/api/v2/projects/9/update/' -k
+            /usr/bin/curl -X POST -u 'admin:r3dh4t' 'https://tower.example.com/api/v2/projects/9/update/' -k
             '''
             }
     }
