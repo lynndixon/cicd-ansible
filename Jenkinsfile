@@ -13,7 +13,7 @@ pipeline {
         steps {
             echo "Refreshing Tower DEV Project"
             sh '''
-            /usr/bin/curl -X POST -u 'admin:r3dh4t' 'https://tower.example.com/api/v2/projects/6/update/' -k
+            /usr/bin/curl -X POST -u 'admin:r3dh4t!' 'https://tower.example.com/api/v2/projects/6/update/' -k
             '''
             }
     }
@@ -24,7 +24,7 @@ pipeline {
         steps {
             echo "Refreshing DEV Cloudforms Automate Domain"
             sh '''
-            /usr/bin/curl -k -X POST -d'{"action":"refresh_from_source"}' -u admin:smartvm "https://cfme-cicd-dev.example.com/api/automate_domains/cloudforms-cicd"
+            /usr/bin/curl -k -X POST -d'{"action":"refresh_from_source"}' -u admin:r3dh4t "https://cfme-cicd-dev.example.com/api/automate_domains/cloudforms-cicd"
             '''
             }
     }
@@ -34,7 +34,7 @@ pipeline {
       }
       steps {
           echo "Testing VM Lifecycle"
-          sh './cfme-scripts/cfme-lifecycle-test.rb cfme-cicd-dev.example.com "admin:smartvm" "100000000000001"'
+          sh './cfme-scripts/cfme-lifecycle-test.rb cfme-cicd-dev.example.com "admin:r3dh4t" "100000000000001"'
           echo "Lifecycle Testing Complete"
           }
         }
@@ -45,7 +45,7 @@ pipeline {
         steps {
             echo "Refreshing Production Tower Project"
             sh '''
-            /usr/bin/curl -X POST -u 'admin:r3dh4t' 'https://tower.example.com/api/v2/projects/9/update/' -k
+            /usr/bin/curl -X POST -u 'admin:r3dh4t!' 'https://tower.example.com/api/v2/projects/9/update/' -k
             '''
             }
     }
@@ -56,7 +56,7 @@ pipeline {
         steps {
             echo "Refreshing Production Cloudforms Automate Domain"
             sh '''
-            /usr/bin/curl -k -X POST -d'{"action":"refresh_from_source"}' -u admin:smartvm "https://cfme-cicd-prod.example.com/api/automate_domains/cloudforms-cicd"
+            /usr/bin/curl -k -X POST -d'{"action":"refresh_from_source"}' -u admin:r3dh4t "https://cfme-cicd-prod.example.com/api/automate_domains/cloudforms-cicd"
             '''
             }
     }
@@ -66,7 +66,7 @@ pipeline {
       }
       steps {
           echo "Testing VM Lifecycle"
-          sh './cfme-scripts/cfme-lifecycle-test.rb cfme-cicd-prod.example.com "admin:smartvm" "101000000000001"'
+          sh './cfme-scripts/cfme-lifecycle-test.rb cfme-cicd-prod.example.com "admin:r3dh4t" "101000000000001"'
           echo "Lifecycle Testing Complete"
           }
         }
